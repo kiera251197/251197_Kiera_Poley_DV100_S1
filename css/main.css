@@ -8,6 +8,8 @@ body {
 
 }
 
+
+
 /*Poppins - Fonts*/
 .poppins-thin {
     font-family: "Poppins", sans-serif;
@@ -116,7 +118,9 @@ body {
     font-weight: 900;
     font-style: italic;
   }
-  
+
+
+
 /*Hero Section - Home*/
   header {
     height: 100vh;
@@ -145,6 +149,8 @@ body {
     font-weight: 600;
   }
 
+
+
   /*nav Bar - All Pages*/
   .topNav {
     overflow: hidden;
@@ -153,7 +159,7 @@ body {
     margin: 1em 2em;
     display: flex;
     flex-direction: row;
-    position: relative;
+    justify-content: space-between;
     align-items: center;
 
  }
@@ -203,6 +209,13 @@ body {
     padding: 2px 4px;
     width: 270px;
     height: 45px;
+    margin-right: 1.5em;
+ }
+
+ .line {
+  border-left: 2px solid #777676ef;
+  padding-left: 5px;
+  padding: 2px;
  }
 
  .searchBarContainer {
@@ -237,14 +250,18 @@ body {
     flex-direction: column;
  }
 
- /*RPV Text Hero Section - Home*/
+
+
+/*RPV Text Hero Section - Home*/
 .redPlanetVenturesBottomText {
     font-family: 'Porter Sans';
     position: absolute;
     font-size: 50px;
     bottom:75px;
-    left: 3%;
+    left: 5%;
+    padding-left: 4%;
     color: #e51728;
+    text-align: left;
 }
 
 .bottomLeftText {
@@ -256,6 +273,8 @@ body {
     left: 10%;
     color: #45016d;
 }
+
+
 
 /*Header/Hero - Contact*/
 .contactHeader {
@@ -282,7 +301,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
+
+
 
 /*About Us Section - Contact*/
 .aboutSection {
@@ -322,10 +344,12 @@ body {
 #rpvContactText {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 900;
+  font-size: 48px;
   padding: 0%;
   margin: 0 0;
 }
+
+
 
 /*Social Media - Contact*/
 #aboutContactText {
@@ -353,7 +377,7 @@ body {
 #socialMediaText {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 900;
+  font-size: 48px;
   padding: 0%;
   margin: 0 0;
 }
@@ -365,6 +389,8 @@ body {
   width: 25%;
   padding: 10px 0;
 }
+
+
 
 /*Google Map - Contact*/
 .googleLocation {
@@ -383,7 +409,7 @@ body {
 #physicalLocation {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 1000;
+  font-size: 48px;
   padding: 0%;
   margin: 0 0;
 }
@@ -392,7 +418,14 @@ body {
   width: 70%;
 }
 
+
+
 /*Footer Section - All Pages*/
+
+.footer {
+  width: 100%;
+}
+
 .footerContainer {
   display: flex;
   flex-direction: row;
@@ -433,9 +466,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   padding: 10px 15px;
   padding-left: 0;
+}
+
+.socialMediaFooter img {
+  padding: 3%;
 }
 
 .horizontalLine {
@@ -447,7 +483,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  /* width: 100%; */
   padding: 10px 15px;
   padding-left: 0;
   color: rgb(173, 173, 173);
@@ -464,6 +500,8 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
+
+
 
 /*Featured Trips - Home*/
 #featuredTripSubText {
@@ -559,6 +597,8 @@ body {
   align-items: center;
 }
 
+
+
 /*Our Shuttle - Home*/
 .travelShuttlesSection {
   background-color: #ffffff;
@@ -615,76 +655,7 @@ body {
   padding: 40px;
 }
 
-/*Mars - Flights*/
-.tagsDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 
-.tags {
-  padding: 0 1%;
-  color: rgb(173, 173, 173);
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.tagsColon {
-  padding: 0 1%;
-  color: rgb(173, 173, 173);
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  padding-right: 0;
-}
-
-.flightsAddButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0 3%;
-}
-
-.bookNowButton p{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  text-align: center;
-  padding-top: 1%;
-  
-}
-
-.addToCartButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  background-color: #45016d;
-  width: 120px;
-  height: 70px;
-  border-radius: 12px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-}
-
-.addToCartButton p{
-  color: #fff;
-  font-size: 18px;
-}
-
-.marsInfoText {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: black;
-}
 
 /*Upcoming Trips - Home*/
 
@@ -726,6 +697,17 @@ body {
   font-weight: 500;
 }
 
+.marsTripCard img {
+ width: 17%;
+}
+
+.marsTripCard {
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*.upcomingTripsSection {
   background-color: #45016d;
   height: 100vh;
@@ -765,3 +747,270 @@ body {
   font-weight: 500;
   text-align: center;
 }*/
+
+
+
+/*Mars - Flights*/
+.tagsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.tags {
+  padding: 0 1%;
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tagsColon {
+  padding: 0 1%;
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 0;
+}
+
+.flightsAddButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 7%;
+}
+
+.bookNowButton p{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 1%;
+  
+}
+
+.addToCartButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-right: 40px;
+  background-color: #45016d;
+  width: 120px;
+  height: 70px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.addToCartButton p{
+  color: #fff;
+  font-size: 18px;
+}
+
+.hrLineFlights {
+  width: "90%";
+
+}
+
+.marsInfoText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.marsRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 212, 58);
+  width: 40%;
+}
+
+#customerReviewText {
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border-left: 1px solid rgb(173, 173, 173);
+  padding-left: 2%;
+  padding: 3px;
+}
+
+.marsPrices {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+.marsPrices h3{
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 0 6%;
+  padding-left: 0;
+  margin: 0;
+}
+
+.marsImage {
+  float: left;
+  padding: 4% 4%;
+  padding-right: 0;
+}
+
+.marsSection {
+ background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.marsFlightTextContainer h1 {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  padding: 0%;
+  margin: 0 0;
+}
+
+
+
+/*Neptune - Flights*/
+.tagsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.tags {
+  padding: 0 1%;
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tagsColon {
+  padding: 0 1%;
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 0;
+}
+
+.flightsAddButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 7%;
+}
+
+.bookNowButton p{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 1%;
+  
+}
+
+.neptuneAddToCartButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-right: 40px;
+  background-color: #55daeb;
+  width: 120px;
+  height: 70px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.neptuneAddToCartButton p{
+  color: #fff;
+  font-size: 18px;
+}
+
+.hrLineFlights {
+  width: "90%";
+
+}
+
+.neptuneInfoText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.neptuneRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 212, 58);
+  width: 40%;
+}
+
+#customerReviewText {
+  color: rgb(173, 173, 173);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border-left: 1px solid rgb(173, 173, 173);
+  padding-left: 2%;
+  padding: 3px;
+}
+
+.neptunePrices {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  color: #55daeb;
+}
+
+.neptunePrices h3{
+  color: #55daeb;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  padding: 0 6%;
+  padding-left: 0;
+  margin: 0;
+}
+
+.neptuneImage {
+  float: left;
+  padding: 4% 4%;
+  padding-right: 0;
+}
+
+.neptuneSection {
+ background-color: #45016d;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.neptuneFlightTextContainer h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  padding: 0%;
+  margin: 0 0;
+}
