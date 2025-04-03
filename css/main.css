@@ -137,9 +137,9 @@ body {
     height: 100vh;
     background-image: url(../assets/img/Images/headerbackBack.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     overflow: hidden;
-    
+
   }
 
 
@@ -256,7 +256,7 @@ body {
 .redPlanetVenturesBottomText {
     font-family: 'Porter Sans';
     position: absolute;
-    font-size: 50px;
+    font-size: 48px;
     bottom:75px;
     left: 5%;
     padding-left: 4%;
@@ -356,6 +356,7 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  font-size: 18px;
   padding: 0;
   margin: 0 3;
    
@@ -370,6 +371,7 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  font-size: 18px;
   padding: 0;
   margin: 0 3;
 }
@@ -402,8 +404,9 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  padding: 0;
+  font-size: 18px;
   margin: 0 3;
+  padding: 0;
 }
 
 #physicalLocation {
@@ -418,6 +421,9 @@ body {
   width: 70%;
 }
 
+.googleMapCorner {
+  border-radius: 20px;
+}
 
 
 /*Footer Section - All Pages*/
@@ -482,23 +488,34 @@ body {
 .allRightsReserved {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   /* width: 100%; */
   padding: 10px 15px;
   padding-left: 0;
-  color: rgb(173, 173, 173);
+  color: rgb(113, 113, 113);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-size: 12px;
+}
+
+.allRightsReserved p {
+  padding: 0 4%;
 }
 
 .tsAndCs {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 12px;
-  color: rgb(173, 173, 173);
+  padding: 0 4%;
+  color: rgb(113, 113, 113);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-size: 12px;
+  width: 20%;
+}
+
+.tsAndCs p{
+  padding: 0 1%;
 }
 
 
@@ -622,7 +639,7 @@ body {
 .travelShuttlesText h3 {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 38px;
   padding: 0%;
   margin: 0 0;
 }
@@ -633,8 +650,8 @@ body {
   flex-direction: column;
   color: rgb(173, 173, 173);  
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .shuttlesImage {
@@ -658,13 +675,17 @@ body {
 
 
 /*Upcoming Trips - Home*/
+.upcomingTripsSection {
+  background-color: #45016d;
+  height: 122vh;
+}
 
 .upcomingTripsText p{
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  padding: 0;
+  padding-top: 4%;
   margin: 0 3;
 }
 
@@ -676,6 +697,21 @@ body {
   margin: 0 0;
 }
 
+.upcomingTripsText {
+  justify-content: center;
+  text-align: center;
+}
+
+.upcomingTripsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+}
+
+/*Mars Trip Card - Home*/
 .marsTripCard p {
   padding: 0 6%;
   display: flex;
@@ -683,22 +719,27 @@ body {
   justify-content: space-around;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
+  font-size: 80%;
 }
 
-.marsTripCard h4 {
+.marsTripCard h3 {
   padding: 0 6%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  text-align: center;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-bottom: 0;
 }
 
 .marsTripCard img {
- width: 17%;
+ width: 100%;
+ padding-top: 15%;
 }
 
 .marsTripCard {
@@ -708,49 +749,127 @@ body {
   justify-content: center;
 }
 
-/*.upcomingTripsSection {
-  background-color: #45016d;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.upcomingTripsImg {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.upcomingTripsImg img {
-  padding: 2% 2%;
-}
-
-.tripCardHeaderText {
+/*Neptune Trip Card - Home*/
+.neptuneTripCard p {
   padding: 0 6%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-}
-
-.tripCardSubText {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
-}*/
+  font-size: 80%;
+}
 
+.neptuneTripCard h3 {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
 
+.neptuneTripCard img {
+ width: 100%;
+ padding-top: 15%;
+}
 
-/*Mars - Flights*/
+.neptuneTripCard {
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Jupiter Trip Card - Home*/
+.jupiterTripCard p {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 80%;
+}
+
+.jupiterTripCard h3 {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
+
+.jupiterTripCard img {
+ width: 100%;
+ padding-top: 15%;
+}
+
+.jupiterTripCard {
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Saturn Trip Card - Home*/
+.saturnTripCard p {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 80%;
+}
+
+.saturnTripCard h3 {
+  padding: 0 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
+
+.saturnTripCard img {
+ width: 100%;
+ padding-top: 15%;
+}
+
+.saturnTripCard {
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookNowButtonUpcomingTrips {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+/*White Section - Flights*/
 .tagsDiv {
   display: flex;
   flex-direction: row;
@@ -871,6 +990,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.marsFlightTextContainer {
+  width: 40%;
 }
 
 .marsFlightTextContainer h1 {
@@ -883,7 +1008,7 @@ body {
 
 
 
-/*Neptune - Flights*/
+/*Purple Section - Flights*/
 .tagsDiv {
   display: flex;
   flex-direction: row;
@@ -1005,6 +1130,12 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.neptuneFlightTextContainer {
+  width: 40%;
 }
 
 .neptuneFlightTextContainer h1 {
@@ -1013,4 +1144,55 @@ body {
   font-size: 48px;
   padding: 0%;
   margin: 0 0;
+}
+
+/*Filter Bar - Flights*/
+.filterContainer {
+  background-color: #45016d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5em;
+}
+
+.filterSector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.filterSector p {
+  padding: 0 20px;
+}
+
+.showFilter {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.showSixDiv {
+  background-color: rgba(255, 255, 255, 0.711);
+  border-radius: 8%;
+  padding: 5px 0;
+  color: #45016d;
+  font-family: "Poppins", sans-serif;
+}
+
+.sortByFilter {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20;
+}
+
+.sortByDefultDiv {
+  background-color: rgba(255, 255, 255, 0.711);
+  border-radius: 8%;
+  padding: 5px 0;
+  color: #45016d;
+  font-family: "Poppins", sans-serif;
 }
