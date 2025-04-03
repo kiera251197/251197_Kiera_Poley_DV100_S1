@@ -109,30 +109,30 @@
                     </div>
             </div>
 
-            <div>
-                <form class="contactForm">
-                <h2>SEND US A MESSAGE</h2>
+            <div id="contact">
+                <form class="formVertical" id="contactForm">
+                <h3>SEND US A MESSAGE</h3>
                 
                 <div class="formInputs">
-                    <div class="yourName">
+                    <div class="formControl">
                         <label>Your name</label>
-                        <input type="text">
+                        <input type="text" placeholder="Abc" required>
                     </div>
-                    <div class="email">
+                    <div class="formControl">
                         <label>Email address</label>
-                        <input type="text">
+                        <input type="email" placeholder="Abc@def.com" required>
                     </div>
-                    <div class="subject">
+                    <div class="formControl">
                         <label>Subject</label>
-                        <input type="text">
+                        <input type="text" placeholder="This is optional" required>
                     </div>
-                    <div class="message">
+                    <div class="formControl">
                         <label>Message</label>
-                        <input type="text">
+                        <textarea class="formText" rows="4" placeholder="Hi! I'd like to ask about" required></textarea>
                     </div>
 
                     <div>
-                        <button class="bookNowButton" type="submit">Submit</button>
+                        <button class="bookNowButton" id="submitButton" type="submit">Submit</button>
                     </div>
                 </div>
                 </form>

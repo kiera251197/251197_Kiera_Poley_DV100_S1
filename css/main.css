@@ -154,7 +154,7 @@ body {
   /*nav Bar - All Pages*/
   .topNav {
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.472);
+    background-color: rgba(255, 255, 255, 0.708);
     border-radius: 20px;
     margin: 1em 2em;
     display: flex;
@@ -170,7 +170,7 @@ body {
 
  .topNav a {
      float: left;
-     color: rgb(167, 167, 167);
+     color: rgb(133, 133, 133);
      text-align: center;
      padding: 14px 16px;
      text-decoration: none;
@@ -551,7 +551,7 @@ body {
 
 .ftTripSection {
   background-color: #45016d;
-  height: 112vh;
+  height: 110vh;
 }
 
 .bookNowButton {
@@ -1234,3 +1234,127 @@ align-items: center;
   padding: 10px 20px;
   width: 35%;
 }
+
+
+
+/*Contact Form - Contact*/
+#contactForm h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: white;
+  padding-left: 6%;
+  margin-bottom: 1%;
+}
+
+#contact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.formInputs {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  padding-left: 3%;
+  
+}
+
+.formControl label {
+  padding-top: 3%;
+}
+
+.formControl input{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 0%;
+  margin-top: 3%;
+  border-radius: 12px;
+  padding: 5%;
+}
+
+form {
+  width: 50%;
+  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  padding-right: 14%;
+}
+
+.formVertical {
+  font-family: "Poppins", sans-serif;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 10px;
+  background: url(../assets/img/Images/formBack.png) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100%; */
+}
+
+input {
+  margin: 1em;
+  width: 100%;
+}
+
+.formControl, textarea {
+  margin: 5%;
+  /* max-width: 80%; */
+  width: 100%;
+  color: #ffffff;
+}
+
+.submitButton {
+  width: 270px;
+  text-decoration: none;
+  height: 70px;
+  background-color: #e51728;
+  border-radius: 12px;
+  /* font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #fff; */
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+.formControl textarea {
+  resize: none;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 0%;
+  margin-top: 3%;
+  border-radius: 12px;
+  padding: 5%;
+}
+
+/* .submitButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 1%;
+  display: block;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+} */
