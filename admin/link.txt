@@ -1,4 +1,6 @@
 https://github.com/kiera251197/251197_Kiera_Poley_DV100_S1.git
 
 I created a new link for the root directory as my old one was not working
-here is the new link and there are multiple pushes on it: https://github.com/kiera251197/251197_Kiera_Poley_DV100_S1
+here is the new link and there are multiple pushes on it (namely 8 in total): https://github.com/kiera251197/251197_Kiera_Poley_DV100_S1
+
+Here is my walkthrough video: c:\Users\Renier\Desktop\251197_KieraPoley_DV100_S1_Walkthrough.mp4
