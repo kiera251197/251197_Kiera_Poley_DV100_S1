@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     
 </head>
@@ -46,7 +46,7 @@
 
         </nav>
 
-        <div class="headerContactContainer">
+        <div class="headerContactContainer container" container>
             <div class="contactUsText">Contact <br> Us</div>
         </div>
 
@@ -56,8 +56,13 @@
 
     <!--About Us Section-->
     <section class="aboutSection">
-        <div class="aboutUs">
-            <div class="aboutText">
+        <div class="aboutUs row">
+
+            <div class="col-md-6" style="padding: 0;">
+                <img src="../assets/img/Images/contactImage.png" alt="Spaceship Contact Image">
+            </div>
+
+            <div class="aboutText col-md-6">
                 <p id="aboutContactText">ABOUT</p>
                 <h2 id="rpvContactText">RED PLANET VENTURES</h2>
                 <p>Welcome to Red Planet Ventures, where we are dedictated 
@@ -72,10 +77,6 @@
                 Planet <br> Ventures.</p>
             </div>
 
-            <div class="contactImage">
-                <img src="../assets/img/Images/contactImage.png" alt="Spaceship Contact Image">
-
-            </div>
         </div>
     </section>
 
@@ -92,7 +93,7 @@
                     
                     <div class="socialsImages">
                         <img src="../assets/img/Images/smInstagram.png" width="70px">
-                        <img src="../assets/img/Images/smX.png" width="70px">
+                        <img src="../assets/img/Images/smX.png" width="100%">
                         <img src="../assets/img/Images/smTicktock.png" width="70px">
                         <img src="../assets/img/Images/smFacebook.png" width="70px">
                     </div>
@@ -100,7 +101,7 @@
                 </div>
 
                 <!--Physical Location Map-->
-                <div class="googleLocation">
+                <div class="googleLocation col-lg-6">
                     <div class="locationText">
                         <p id="physicalLocationSubText">OR VISIT US AT OUR</p>
                         <h1 id="physicalLocation">PHYSICAL LOCATION</h1>
@@ -194,7 +195,7 @@
 
     </section>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 
 

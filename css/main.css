@@ -134,12 +134,13 @@ body {
   }
 
   .contactHeader  {
-    height: 100vh;
-    background-image: url(../assets/img/Images/headerbackBack.png);
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/Images/headerbackBack.png) center;
+    /* background-image: url(../assets/img/Images/headerbackBack.png); */
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-
   }
 
 
@@ -297,7 +298,7 @@ body {
 .contactUsText {
     font-family: 'Porter Sans';
     color: white;
-    font-size: 500%;
+    font-size: 75px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -309,45 +310,54 @@ body {
 
 /*About Us Section - Contact*/
 .aboutSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .aboutUs {
-    display: flex;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
     width: 80%;
     left:30%;
     top: 10%;
-    padding: 40px;
+    padding: 40px; */
 }
 
-.contactImage {
+/* .contactImage {
     display: flex;
     justify-content: flex-end;
     align-content: center;
     margin: 0px;
     padding-left: 8em;
+} */
+
+.aboutUs img {
+  width: 100%;
+  padding: 4em 4em;
+  margin: 0;
 }
 
 .aboutText {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
     color: rgb(173, 173, 173);
     font-family: "Poppins", sans-serif;
-    font-size: 500;
+    font-size: 100%;
     font-weight: 500;
+    padding: 4% 10%;
+    padding-right: 0;
 }
 
 #rpvContactText {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 2.5em;
+  font-weight: 700;
   padding: 0%;
   margin: 0 0;
+  margin-bottom: 2%;  
 }
 
 
@@ -357,9 +367,9 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.2em;
   padding: 0;
-  margin: 0 3;
+  margin-bottom: 2%;
    
 }
 
@@ -541,11 +551,15 @@ body {
 
 
 /*Featured Trips - Home*/
+#carouselExample {
+  padding: 4% 0;
+}
+
 #featuredTripSubText {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 100%;
   padding: 0;
   margin: 0 3;
 }
@@ -553,7 +567,8 @@ body {
 .featuredTripContainer h3 {
   color: #fff;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 270%;
+  font-weight: 600;
   padding: 0%;
   margin: 0 0;
 }
@@ -564,13 +579,13 @@ body {
   flex-direction: column;
   color: #fff;  
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 100%;
+  font-weight: 400;
 }
 
 .ftTripSection {
   background-color: #45016d;
-  height: 110vh;
+  height: fit-content;
 }
 
 .bookNowButton {
@@ -639,7 +654,7 @@ body {
 /*Our Shuttle - Home*/
 .travelShuttlesSection {
   background-color: #ffffff;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -659,9 +674,10 @@ body {
 .travelShuttlesText h3 {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 38px;
+  font-size: 250%;
+  font-weight: 700;
   padding: 0%;
-  margin: 0 0;
+  margin: 2% 0;
 }
 
 .travelShuttlesText p {
@@ -670,7 +686,7 @@ body {
   flex-direction: column;
   color: rgb(173, 173, 173);  
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 90%;
   font-weight: 400;
 }
 
@@ -678,18 +694,19 @@ body {
   display: flex;
   justify-content: flex-end;
   align-content: center;
-  margin: 0px;
-  padding-left: 8em;
+  margin: 0;
+  /* padding-left: 8em; */
 }
 
 .travelShuttlesContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 80%;
   left:30%;
   top: 10%;
-  padding: 40px;
+  padding: 5%;
 }
 
 
@@ -697,22 +714,23 @@ body {
 /*Upcoming Trips - Home*/
 .upcomingTripsSection {
   background-color: #45016d;
-  height: 122vh;
+  height: fit-content;
 }
 
 .upcomingTripsText p{
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 140%;
   padding-top: 4%;
-  margin: 0 3;
+  margin: 0 3%;
 }
 
 .upcomingTripsText h3{
   color: #fff;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 300%;
+  font-weight: 600;
   padding: 0%;
   margin: 0 0;
 }
@@ -731,6 +749,10 @@ body {
   align-items: center;
 }
 
+.bookNowButton {
+  margin-bottom: 4%;
+}
+
 /*Mars Trip Card - Home*/
 .marsTripCard p {
   padding: 0 6%;
@@ -741,7 +763,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
-  font-size: 80%;
+  font-size: 85%;
 }
 
 .marsTripCard h3 {
@@ -753,8 +775,9 @@ body {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  font-size: 150%;
   margin-top: 3%;
-  margin-bottom: 0;
+  margin-bottom: 2%;
 }
 
 .marsTripCard img {
@@ -763,125 +786,12 @@ body {
 }
 
 .marsTripCard {
-  padding-bottom: 1%;
+  padding: 1% 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/*Neptune Trip Card - Home*/
-.neptuneTripCard p {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: 80%;
-}
-
-.neptuneTripCard h3 {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin-top: 3%;
-  margin-bottom: 0;
-}
-
-.neptuneTripCard img {
- width: 100%;
- padding-top: 15%;
-}
-
-.neptuneTripCard {
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/*Jupiter Trip Card - Home*/
-.jupiterTripCard p {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: 80%;
-}
-
-.jupiterTripCard h3 {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin-top: 3%;
-  margin-bottom: 0;
-}
-
-.jupiterTripCard img {
- width: 100%;
- padding-top: 15%;
-}
-
-.jupiterTripCard {
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/*Saturn Trip Card - Home*/
-.saturnTripCard p {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
-  font-size: 80%;
-}
-
-.saturnTripCard h3 {
-  padding: 0 6%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin-top: 3%;
-  margin-bottom: 0;
-}
-
-.saturnTripCard img {
- width: 100%;
- padding-top: 15%;
-}
-
-.saturnTripCard {
-  padding-bottom: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 .bookNowButtonUpcomingTrips {
   display: flex;
@@ -940,10 +850,10 @@ body {
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  margin-right: 40px;
+  margin-right: 10%;
   background-color: #45016d;
-  width: 120px;
-  height: 70px;
+  width: 19%;
+  height: 100%;
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -951,18 +861,21 @@ body {
 
 .addToCartButton p{
   color: #fff;
-  font-size: 18px;
+  font-size: 120%;
+  padding: 17% 2%;
+  margin: 0;
 }
 
 .hrLineFlights {
   width: "90%";
-
+  color: #8e8e8e;
 }
 
 .marsInfoText {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: black;
+  padding-bottom: 2%;
 }
 
 .marsRating {
@@ -972,28 +885,31 @@ body {
   align-items: center;
   color: rgb(255, 212, 58);
   width: 40%;
+  padding: 2% 0;
 }
 
 #customerReviewText {
   color: rgb(173, 173, 173);
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 90%;
   font-weight: 500;
-  border-left: 1px solid rgb(173, 173, 173);
   padding-left: 2%;
-  padding: 3px;
+  padding: 4%;
+  margin: 0;
 }
 
 .marsPrices {
   display: flex;
   flex-direction: row;
   width: 40%;
+  padding: 2% 0;
 }
 
 .marsPrices h3{
   color: rgb(173, 173, 173);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-size: 110%;
   padding: 0 6%;
   padding-left: 0;
   margin: 0;
@@ -1012,6 +928,7 @@ body {
   align-items: center;
   width: 100%;
   margin: 0;
+  padding: 4% 0;
 }
 
 .marsFlightTextContainer {
@@ -1021,7 +938,8 @@ body {
 .marsFlightTextContainer h1 {
   color: black;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 250%;
+  font-weight: 600;
   padding: 0%;
   margin: 0 0;
 }
@@ -1055,8 +973,7 @@ body {
 .flightsAddButtons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  padding-bottom: 7%;
+  padding-bottom: 3%;
 }
 
 .bookNowButton p{
@@ -1069,7 +986,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 7%;
   
 }
 
@@ -1090,7 +1007,9 @@ body {
 
 .neptuneAddToCartButton p{
   color: #fff;
-  font-size: 18px;
+  font-size: 120%;
+  padding: 17% 2%;
+  margin: 0;
 }
 
 .hrLineFlights {
@@ -1100,8 +1019,9 @@ body {
 
 .neptuneInfoText {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: white;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding-bottom: 2%;
 }
 
 .neptuneRating {
@@ -1111,6 +1031,7 @@ body {
   align-items: center;
   color: rgb(255, 212, 58);
   width: 40%;
+  padding: 2% 0;
 }
 
 #customerReviewText {
@@ -1120,13 +1041,14 @@ body {
   font-weight: 500;
   border-left: 1px solid rgb(173, 173, 173);
   padding-left: 2%;
-  padding: 3px;
+  padding: 4%;
 }
 
 .neptunePrices {
   display: flex;
   flex-direction: row;
   width: 40%;
+  padding: 2% 0;
   color: #55daeb;
 }
 
@@ -1134,6 +1056,7 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-size: 110%;
   padding: 0 6%;
   padding-left: 0;
   margin: 0;
@@ -1156,12 +1079,13 @@ body {
 
 .neptuneFlightTextContainer {
   width: 40%;
+  padding: 4% 0;
 }
 
 .neptuneFlightTextContainer h1 {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 220%;
   padding: 0%;
   margin: 0 0;
 }
@@ -1189,22 +1113,26 @@ align-items: center;
   color: #45016d;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 90%;
   margin: 0;
 }
 
 .showFilter {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 90%;
   font-weight: 400;
+}
+
+.showFilter p{
+  margin: 0;
 }
 
 .showSixDiv {
   background-color: rgba(255, 255, 255, 0.711);
   border-radius: 8px;
-  padding: 1% 0;
-  width: 6%;
+  padding: 1% 1%;
+  width: 10%;
   color: #45016d;
   font-family: "Poppins", sans-serif;
   padding-left: 3%;
@@ -1213,16 +1141,20 @@ align-items: center;
 .sortByFilter {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 90%;
   font-weight: 400;
   padding-left: 3%;
+}
+
+.sortByFilter p{
+  margin: 0;
 }
 
 .sortByDefultDiv {
   background-color: rgba(255, 255, 255, 0.711);
   border-radius: 8px;
   padding: 1% 0;
-  width: 25%;
+  width: 28%;
   color: #45016d;
   font-family: "Poppins", sans-serif;
   padding-left: 2%;
@@ -1242,7 +1174,8 @@ align-items: center;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 90%;
+  margin: 0;
 }
 
 .filterSectorLeft {
@@ -1250,7 +1183,7 @@ align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1.5% 2%;
   width: 35%;
 }
 
@@ -1383,7 +1316,6 @@ button {
 }
 
 /*History - About*/
-
 #aboutMissionSubText {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
@@ -1423,7 +1355,7 @@ button {
 }
 
 .missionAboutContainer img {
-  width: 50%;
+  width: 100%;
   padding: 4em 7em;
   padding-right: 2em;
 }
@@ -1468,7 +1400,7 @@ button {
 }
 
 .historyContainer img {
-  width: 50%;
+  width: 100%;
   padding: 4em 7em;
   padding-left: 2em;
 }
