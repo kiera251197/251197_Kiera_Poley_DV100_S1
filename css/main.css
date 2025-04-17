@@ -124,7 +124,8 @@ body {
 /*Hero Section - Home*/
   header {
     height: 100vh;
-    background-image: url(../assets/img/Images/homePageHeader.png);
+    background: url(../assets/img/Images/homePageHeader.png) center;
+    /* background-image: url(../assets/img/Images/homePageHeader.png); */
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -268,7 +269,7 @@ body {
 .bottomLeftText {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 70%;
     position: absolute;
     bottom: 10px;
     left: 10%;
@@ -387,7 +388,7 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 110%;
   padding: 0;
   margin: 0 3;
 }
@@ -395,7 +396,8 @@ body {
 #socialMediaText {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 250%;
+  font-weight: 600;
   padding: 0%;
   margin: 0 0;
 }
@@ -421,7 +423,7 @@ body {
   color: #55daeb;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 110%;
   margin: 0 3;
   padding: 0;
 }
@@ -429,13 +431,14 @@ body {
 #physicalLocation {
   color: #45016d;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
+  font-size: 250%;
+  font-weight: 600;
   padding: 0%;
   margin: 0 0;
 }
 
 .googleMap{
-  width: 70%;
+  width: 100%;
 }
 
 .googleMapCorner {
@@ -852,8 +855,8 @@ body {
   align-content: center;
   margin-right: 10%;
   background-color: #45016d;
-  width: 19%;
-  height: 100%;
+  width: 100px;
+  height: 70px;
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -1204,8 +1207,8 @@ align-items: center;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .formInputs {
@@ -1239,7 +1242,7 @@ form {
   padding-left: 2%;
   padding-top: 2%;
   padding-bottom: 4%;
-  padding-right: 14%;
+  padding-right: 6%;
 }
 
 .formVertical {
@@ -1301,18 +1304,13 @@ button {
 /*Form & Map/Socials Positioning*/
 .contactUsSection {
   display: flex;
-  width: 100%;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
 }
 
-#contact {
-  margin-left: 15%;
-}
-
 .googleMapAndSocialsContainer {
-  margin-left: 7%;
+  margin-left: 3%;
 }
 
 /*History - About*/
@@ -1338,12 +1336,12 @@ button {
 .missionText p {
   color: rgb(173, 173, 173);
   font-family: "Poppins", sans-serif;
-  font-size: 500;
+  font-size: 90%;
   font-weight: 500;
 }
 
 .missionText {
-  padding: 4em 0;
+  padding: 3% 4%;
   padding-right: 5em;
 }
 
@@ -1352,12 +1350,11 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 4% 6%;
 }
 
 .missionAboutContainer img {
   width: 100%;
-  padding: 4em 7em;
-  padding-right: 2em;
 }
 
 #aboutMissionText {
@@ -1365,7 +1362,7 @@ button {
   font-family: "Poppins", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
-  padding: 0%;
+  padding: 0;
   margin: 0 0;
   margin-bottom: 2%;
 }
@@ -1388,7 +1385,7 @@ button {
 .historyText p {
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
-  font-size: 500;
+  font-size: 90%;
   font-weight: 500;
 }
 
@@ -1397,12 +1394,11 @@ button {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+  padding: 4% 6%;
 }
 
 .historyContainer img {
   width: 100%;
-  padding: 4em 7em;
-  padding-left: 2em;
 }
 
 .historySection {
