@@ -258,7 +258,7 @@ body {
 .redPlanetVenturesBottomText {
     font-family: 'Porter Sans';
     position: absolute;
-    font-size: 48px;
+    font-size: 44px;
     bottom:75px;
     left: 5%;
     padding-left: 4%;
@@ -376,7 +376,8 @@ body {
 
 .socialMediaDiv {
   margin: 0;
-  width: 100%;
+  width: 200%;
+  height: 150%;
   padding: 2% 10%;
 }
 
@@ -476,14 +477,12 @@ body {
   font-weight: 600;
 }
 
-.pagesFooter {
+.pagesFooter a {
+  margin-bottom: 0.5em;
+  text-decoration: none;
   color: rgb(102, 102, 102);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-}
-
-.pagesFooter p {
-  margin-bottom: 0.5em;
 }
 
 .pagesFooterLinks {
