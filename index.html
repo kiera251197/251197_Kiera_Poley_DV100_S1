@@ -21,27 +21,98 @@
 <body>
     <header>
         <!--Nav Bar-->
-        <nav class="navigation">
-            <div class="topNav">
-                <a href="index.html"><img src="assets/img/Images/logo.png" width="180px"></a>
-                
-                <div class="topNavRight">
-                   <a class="active" href="index.html">Home</a>
-                   <a href="pages/flights.html">Flights</a>
-                   <a href="pages/contact.html">Contact</a>
-                   <a href="pages/about.html">About</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid navBarFlex">
+            <a class="navbar-brand" href="index.html"><img id="imgLogoNav" src="assets/img/Images/logo.png" width="180px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!--Nav Links-->
+                <div class="navbar-nav">
+                    <a class="active nav-link" id="activeLink" href="index.html">Home</a>
+                    <a class="nav-link" href="pages/flights.html">Flights</a>
+                    <a class="nav-link" href="pages/contact.html">Contact</a>
+                    <a class="nav-link" href="pages/about.html">About</a>
+                </div>
+            </div>    
+            
+            <div class="collapse navbar-collapse" 
+            id="navbarNavAltMarkup"> <!--Search Bar-->
+            <div class="containerSearch">
+                <div class="searchBarContainer">
+                    <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="searchItem bar" onclick="DisplaySearchBAr()" id="searchbox" type="search" placeholder="Search" onkeyup="search()">
+                    <button class="searchItem" id="shoppingCartIcon" onclick="openModal()"><i class="fa-solid fa-basket-shopping line"></i></button>
+                    
                 </div>
 
-                <div class="searchBarContainer">
-                    <div class="searchBar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p id="searchText">Search</p>
-                        <i class="fa-solid fa-basket-shopping line"></i>
+                <a href="pages/flights.html#marsFlightId">
+                <div class="product-list" id="product-list">
+                    <div class="product">
+                        <img src="assets/img/Images/flighhtMars.png">
+                        <div class="p-details">
+                            <h2>The Classic Mars Experience</h2>
+                            <h3>R25 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/flights.html#neptuneFlightId">
+                    <div class="product">
+                        <img src="assets/img/Images/flightNeptune.png">
+                        <div class="p-details">
+                            <h2>Neptune's Cosmic Dive</h2>
+                            <h3>R45 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/flights.html#jupiterFlightId">
+                    <div class="product">
+                        <img src="assets/img/Images/flightJupiter.png">
+                        <div class="p-details">
+                            <h2>The Giants Journey</h2>
+                            <h3>R65 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/flights.html#saturnFlightId">
+                    <div class="product">
+                        <img src="assets/img/Images/flightSaturn.png">
+                        <div class="p-details">
+                            <h2>A Ring Around Saturn</h2>
+                            <h3>R40 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/flights.html#uranusFlightId">
+                    <div class="product">
+                        <img src="assets/img/Images/flightUranus.png">
+                        <div class="p-details">
+                            <h2>Uranus Uncharted</h2>
+                            <h3>R50 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="pages/flights.html#moonFlightId">
+                    <div class="product">
+                        <img src="assets/img/Images/flightMoon.png">
+                        <div class="p-details">
+                            <h2>Moonlight Meander</h2>
+                            <h3>R15 000</h3>
+                        </div>
                     </div>
                 </div>
-            
+                </a>
+
             </div>
-        </nav>
+            </div>
+        </div>
+    </nav>
 
         <!--Hero Section Text-->
         <div class="headerContainer">
@@ -51,14 +122,41 @@
 
     </header>
 
+    <!--Modal-->
+    <div class="cartModal" id="cartModal">
+        <div class="modal-text">
+            <h2>Your cart</h2>
+            <p>All selected flights are displayed below</p>
+            <div id="marsCartFlight" class="marsCartFlight"></div>
+            <div id="neptuneCartFlight" class="neptuneCartFlight"></div>
+            <div id="jupiterCartFlight" class="jupiterCartFlight"></div>
+            <div id="saturnCartFlight" class="saturnCartFlight"></div>
+            <div id="uranusCartFlight" class="uranusCartFlight"></div>
+            <div id="moonCartFlight" class="moonCartFlight"></div>
+
+            <div class="cartBelow" id="cartBelow">
+                <div id="totalText" class="totalText">
+                    <p>Total:</p>
+                    <p>R 0.00</p>
+                </div>
+
+                <div class="shoppingCartButtons">
+                    <button id="checkOutButton" class="checkOutButton"><a href="../index.html">Check Out</a></button>
+                    <button id="continueShoppingButton" class="continueShoppingButton"><a href="../pages/flights.html">Continue Shopping</a></button>
+                </div>
+            </div>
+            <button id="closeModal" onclick="closeModal()">+</button>
+        </div>
+    </div>
+
 
 
     <!--Featured Trips-->
     <section class="ftTripSection">
-        <div class="featuredTripContainer">
+        <div class="featuredTripContainer container-fluid row align-items-center">
 
             <!--Image Slider-->
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide col-lg-6">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src="assets/img/Images/marsSliderClipped1.png" class="d-block w-100" alt="Mars Image Slider">
@@ -84,7 +182,7 @@
               </div>
             
             <!--Trips Text-->
-            <div class="ftTripsText">
+            <div class="ftTripsText col-lg-6 justify-content-center">
                 <p id="featuredTripSubText">FEATURED TRIP</p>
                 <h3>THE CLASSIC MARS <br> EXPERIENCE</h3>
                 <p>Embark on a Mars Vacation: red deserts, ancient <br> 
@@ -105,8 +203,8 @@
 
     <!--Travel Shuttles-->
     <section class="travelShuttlesSection">
-        <div class="travelShuttlesContainer">
-            <div class="travelShuttlesText">
+        <div class="travelShuttlesContainer container-fluid row">
+            <div class="col-lg-4 travelShuttlesText">
                 <p id="travelShuttlesSubText">OUR SHUTTLES</p>
                 <h3>Travel In Style With A <br> Variety Of Shuttles</h3>
                 <p>Select from our range of luxury, commercial, or <br>
@@ -117,7 +215,7 @@
                 experiece for every traveler.</p>
             </div>
             <!--Shuttle Image-->
-            <div class="shuttlesImage">
+            <div class="col-lg-6 shuttlesImage">
                 <img src="assets/img/Images/spacSchuttles.png" alt="Shuttles Image" width="100%">
             </div>
         </div>
@@ -135,29 +233,29 @@
             </div>
 
             <!--Upcoming Trip Cards-->
-            <div class="upcomingTripsContainer">
-                <div class="marsTripCard">
+            <div class="upcomingTripsContainer container-fluid row">
+                <div class="marsTripCard col-lg-3">
                     <img src="assets/img/Images/upcomingTrip1.png" alt="Mars Upcoming Trip Image">
                     <h3>The Classic Mars <br> Experience</h3>
                     <p>Explore red deserts, ancient relics, <br>
                     low-gravity adventures on Mars</p>
                 </div>
 
-                <div class="marsTripCard">
+                <div class="marsTripCard col-lg-3">
                     <img src="assets/img/Images/upcomingTrip3.png" alt="Neptune Upcoming Trip Image">
                     <h3>Neptune's Cosmic <br> Dive</h3>
                     <p>Experience Neptune's mysterious <br>
                     depths in a celestial voyage.</p>
                 </div>
 
-                <div class="marsTripCard">
+                <div class="marsTripCard col-lg-3">
                     <img src="assets/img/Images/upcomingTrip2.png" alt="Jupiter Upcoming Trip Image">
                     <h3>Jupiter: The Giant's <br> Journery</h3>
                     <p>Embark on Jupiter and witness the <br>
                         gas giant's majesty.</p>
                 </div>
 
-                <div class="marsTripCard">
+                <div class="marsTripCard col-lg-3">
                     <img src="assets/img/Images/upcomingTrip4.png" alt="Saturn Upcoming Trip Image">
                     <h3>Ring a Round a <br> Saturn</h3>
                     <p>Explore Saturn's rings, moons, and <br>
@@ -180,35 +278,35 @@
 
     <!--Footer-->
     <section class="footer">
-        <div class="footerContainer">
+        <div class="footerContainer container-fluid row">
            <!--Logo Left-->
-           <div class="logoLeftFooter">
+           <div class="logoLeftFooter col-lg-4">
                <a href="index.html"><img src="assets/img/Images/logo.png" width="180px" alt="Red Planet Ventures Logo"></a>
                <p id="footerLogoText">Offering unforgettable trips to <br>
                explore planets in our solar <br> system</p>
            </div>
    
            <!--Company Pages-->
-           <div class="pagesFooterLinks">
+           <div class="pagesFooterLinks col-lg-4">
                <h3 id="companyFooterText">Company</h3>
               
                <div class="pagesFooter">
-                   <p>Home</p>
-                   <p>Flights</p>
-                   <p>Contact Us</p>
-                   <p>About Us</p>
+                <a href="index.html"> <p>Home</p> </a>
+                <a href="pages/flights.html"> <p>Flights</p> </a>
+                <a href="pages/contact.html"> <p>Contact Us</p> </a>
+                <a href="pages/about.html"> <p>About Us</p> </a>
                </div>
            </div>
    
            <!--Social Media Links-->
-           <div class="socialMediaFooter">
+           <div class="socialMediaFooter col-lg-4">
                <h3 id="smFooterText">Social Media Links</h3>
    
                <div class="socialMediaContainerFooter">
-                   <img src="assets/img/Images/smInstagram.png" width="50px" alt="Red Planet Ventures Instagram Image">
-                   <img src="assets/img/Images/smX.png" width="50px" alt="Red Planet Ventures X Image">
-                   <img src="assets/img/Images/smTicktock.png" width="50px" alt="Red Planet Ventures TikTok Image">
-                   <img src="assets/img/Images/smFacebook.png" width="50px" alt="Red Planet Ventures Facebook Image">
+                    <a href="https://www.instagram.com/openwindowinstitute/"><img src="assets/img/Images/smInstagram.png" width="50px" alt="Red Planet Ventures Instagram Image"></a>
+                    <a href="https://x.com/"><img src="assets/img/Images/smX.png" width="50px" alt="Red Planet Ventures X Image"></a>
+                    <a href="https://www.tiktok.com/@open_window_"><img src="assets/img/Images/smTicktock.png" width="50px" alt="Red Planet Ventures TikTok Image"></a>
+                    <a href="https://www.facebook.com/theopenwindow/"><img src="assets/img/Images/smFacebook.png" width="50px" alt="Red Planet Ventures Facebook Image"></a>
                </div>
            </div>
         </div>
@@ -229,6 +327,8 @@
    
        
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+       <script src="js/script.js"></script>
 </body>
 
 

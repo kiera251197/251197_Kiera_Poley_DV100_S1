@@ -22,35 +22,132 @@
     <!--Flights Header Section-->
     <header class="contactHeader">
         
-        <nav class="navFlex">
-            <div class="topNav">
-                <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px"></a>
-                
-                <!--Nav Bar-->
-                <div class="topNavRight">
-                   <a href="../index.html">Home</a>
-                   <a class="active" href="flights.html">Flights</a>
-                   <a href="contact.html">Contact</a>
-                   <a href="about.html">About</a>
+       <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid navBarFlex">
+            <a class="navbar-brand" href="../index.html"><img id="imgLogoNav" src="../assets/img/Images/logo.png" width="180px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!--Nav Links-->
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="active nav-link" id="activeLink" href="../pages/flights.html">Flights</a>
+                    <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    <a class="nav-link" href="../pages/about.html">About</a>
+                </div>
+            </div>    
+            
+            <div class="collapse navbar-collapse" 
+            id="navbarNavAltMarkup"> <!--Search Bar-->
+            <div class="containerSearch">
+                <div class="searchBarContainer">
+                    <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="searchItem bar" onclick="DisplaySearchBAr()" id="searchbox" type="search" placeholder="Search" onkeyup="search()">
+                    <button class="searchItem" id="shoppingCartIcon" onclick="openModal()"><i class="fa-solid fa-basket-shopping line"></i></button>
+                    
                 </div>
 
-                 <!--Search Bar-->
-                 <div class="searchBarContainer">
-                    <div class="searchBar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p id="searchText">Search</p>
-                        <i class="fa-solid fa-basket-shopping line"></i>
+                <a href="../pages/flights.html#marsFlightId">
+                <div class="product-list" id="product-list">
+                    <div class="product">
+                        <img src="../assets/img/Images/flighhtMars.png">
+                        <div class="p-details">
+                            <h2>The Classic Mars Experience</h2>
+                            <h3>R25 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#neptuneFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightNeptune.png">
+                        <div class="p-details">
+                            <h2>Neptune's Cosmic Dive</h2>
+                            <h3>R45 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#jupiterFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightJupiter.png">
+                        <div class="p-details">
+                            <h2>The Giants Journey</h2>
+                            <h3>R65 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#saturnFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightSaturn.png">
+                        <div class="p-details">
+                            <h2>A Ring Around Saturn</h2>
+                            <h3>R40 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#uranusFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightUranus.png">
+                        <div class="p-details">
+                            <h2>Uranus Uncharted</h2>
+                            <h3>R50 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#moonFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightMoon.png">
+                        <div class="p-details">
+                            <h2>Moonlight Meander</h2>
+                            <h3>R15 000</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+                </a>
 
-        </nav>
+            </div>
+            </div>
+        </div>
+    </nav>
 
         <div class="headerContactContainer">
             <div class="contactUsText">BOOK A FLIGHT</div>
         </div>
     
     </header>
+
+       <!--Modal-->
+    <div class="cartModal" id="cartModal">
+        <div class="modal-text">
+            <h2>Your cart</h2>
+            <p>All selected flights are displayed below</p>
+            <div id="marsCartFlight" class="marsCartFlight"></div>
+            <div id="neptuneCartFlight" class="neptuneCartFlight"></div>
+            <div id="jupiterCartFlight" class="jupiterCartFlight"></div>
+            <div id="saturnCartFlight" class="saturnCartFlight"></div>
+            <div id="uranusCartFlight" class="uranusCartFlight"></div>
+            <div id="moonCartFlight" class="moonCartFlight"></div>
+
+            <div class="cartBelow" id="cartBelow">
+                <div id="totalText" class="totalText">
+                    <p>Total:</p>
+                    <p>R 0.00</p>
+                </div>
+
+                <div class="shoppingCartButtons">
+                    <button id="checkOutButton" class="checkOutButton"><a href="../index.html">Check Out</a></button>
+                    <button id="continueShoppingButton" class="continueShoppingButton"><a href="../pages/flights.html">Continue Shopping</a></button>
+                </div>
+            </div>
+            <button id="closeModal" onclick="closeModal()">+</button>
+        </div>
+    </div>
    
     <!--Filter Flights Page-->
     <section>
@@ -82,21 +179,28 @@
         </div>
     </section>
 
+
+
+
     <!--Classic Mars Experience-->
     <section>
-        <div class="marsSection row">
+        <div id="marsFlightId" class="marsSection container-fluid row justify-content-center">
             
-            <div class="marsImage col-md-4">
+            <div class="marsImage col-lg-5">
                 <img src="../assets/img/Images/flighhtMars.png" alt="Mars Flights Page Image" width="90%">
             </div>
 
-            <div class="marsFlightTextContainer col-md-8">
-                <h1>The Classic Mars Experience</h1>
+            <div class="marsFlightTextContainer col-lg-7">
+                <h1 id="marsId">The Classic Mars Experience</h1>
 
                 <!--Prices-->
                 <div class="marsPrices">
-                    <h3>R 25,000.00</h3>
-                    <h3><strike>R 50,000.00</strike></h3>
+                    <div class="finalMarsPrice">
+                        <p id="marsPriceCart" style="display: none;"> 25000</p>
+                        <h3>R25,000.00</h3>
+                    </div>
+                    <h3><strike>R50,000.00</strike></h3>
+                   
                 </div>
 
                 <!--Ratings-->
@@ -118,16 +222,17 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="addToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton">
+                            <button onclick="decreaseCount(counterMars, 'marsId', 'marsPriceCart', 'marsCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterMars">0</label>
+                            <button onclick="increaseCount(counterMars, 'marsId', 'marsPriceCart', 'marsCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('marsCartFlight')">Book Now</button>
                 </div>
+                
 
                 <!--Horizontal Line-->
                 <hr class="hrLineFlights">
@@ -162,17 +267,18 @@
 
     <!--Neptune's Cosmic Dive-->
     <section>
-        <div class="neptuneSection">
+        <div id="neptuneFlightId" class="neptuneSection container-fluid row">
             
-            <div class="neptuneImage col-md-4">
+            <div class="neptuneImage col-lg-5">
                 <img src="../assets/img/Images/flightNeptune.png" alt="Neptune Flights Page Image" width="90%">
             </div>
 
-            <div class="neptuneFlightTextContainer col-md-8">
-                <h1>Neptune's Cosmic Dive</h1>
+            <div class="neptuneFlightTextContainer col-lg-7">
+                <h1 id="neptuneId">Neptune's Cosmic Dive</h1>
 
                 <!--Prices-->
                 <div class="neptunePrices">
+                    <p id="neptunePriceCart" style="display: none;"> 45000</p>
                     <h3>R 45,000.00</h3>
                 </div>
 
@@ -195,15 +301,15 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="neptuneAddToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton2">
+                            <button onclick="decreaseCount(counterNeptune, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterNeptune">0</label>
+                            <button onclick="increaseCount(counterNeptune, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('neptuneCartFlight')">Book Now</button>
                 </div>
 
                 <!--Horizontal Line-->
@@ -239,17 +345,18 @@
 
     <!--The Giant's Journey-->
     <section>
-        <div class="marsSection">
+        <div id="jupiterFlightId" class="marsSection container-fluid row">
             
-            <div class="marsImage col-md-4">
+            <div class="marsImage col-lg-5">
                 <img src="../assets/img/Images/flightJupiter.png" alt="Jupiter Flights Page Image" width="90%">
             </div>
 
-            <div class="marsFlightTextContainer col-md-8">
-                <h1>The Giant's Journey</h1>
+            <div class="marsFlightTextContainer col-lg-7">
+                <h1 id="jupiterId">The Giant's Journey</h1>
 
                 <!--Prices-->
                 <div class="marsPrices">
+                    <p id="jupiterPriceCart" style="display: none;"> 65000</p>
                     <h3>R 65,000.00</h3>
                 </div>
 
@@ -273,15 +380,15 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="addToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton">
+                            <button onclick="decreaseCount(counterJupiter, 'jupiterId', 'jupiterPriceCart', 'jupiterCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterJupiter">0</label>
+                            <button onclick="increaseCount(counterJupiter, 'jupiterId', 'jupiterPriceCart', 'jupiterCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('jupiterCartFlight')">Book Now</button>
                 </div>
 
                 <!--Horizontal Line-->
@@ -317,17 +424,18 @@
 
     <!--Ring Around a Saturn-->
     <section>
-        <div class="neptuneSection">
+        <div id="saturnFlightId" class="neptuneSection container-fluid row">
             
-            <div class="neptuneImage col-md-4">
+            <div class="neptuneImage col-lg-5">
                 <img src="../assets/img/Images/flightSaturn.png" alt="Saturn Flights Page Image" width="90%">
             </div>
 
-            <div class="neptuneFlightTextContainer col-md-8">
-                <h1>Neptune's Cosmic Dive</h1>
+            <div class="neptuneFlightTextContainer col-lg-7">
+                <h1 id="saturnId">A Ring Around Saturn</h1>
 
                 <!--Prices-->
                 <div class="neptunePrices">
+                    <p id="saturnPriceCart" style="display: none;"> 40000</p>
                     <h3>R 40,000.00</h3>
                 </div>
 
@@ -352,15 +460,15 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="neptuneAddToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton2">
+                            <button onclick="decreaseCount(counterSaturn, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterSaturn">0</label>
+                            <button onclick="increaseCount(counterSaturn, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('neptuneCartFlight')">Book Now</button>
                 </div>
 
                 <!--Horizontal Line-->
@@ -396,17 +504,18 @@
 
     <!--Uranus Uncharted-->
     <section>
-        <div class="marsSection">
+        <div id="uranusFlightId" class="marsSection container-fluid row">
             
-            <div class="marsImage col-md-4">
+            <div class="marsImage col-lg-5">
                 <img src="../assets/img/Images/flightUranus.png" alt="uranus Flights Page Image" width="90%">
             </div>
 
-            <div class="marsFlightTextContainer col-md-8">
-                <h1>Uranus Uncharted</h1>
+            <div class="marsFlightTextContainer col-lg-7">
+                <h1 id="uranusId">Uranus Uncharted</h1>
 
                 <!--Prices-->
                 <div class="marsPrices">
+                    <p id="uranusPriceCart" style="display: none;"> 50000</p>
                     <h3>R 50,000.00</h3>
                 </div>
 
@@ -431,15 +540,15 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="addToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton">
+                            <button onclick="decreaseCount(counterUranus, 'uranusId', 'uranusPriceCart', 'uranusCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterUranus">0</label>
+                            <button onclick="increaseCount(counterUranus, 'uranusId', 'uranusPriceCart', 'uranusCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('uranusCartFlight')">Book Now</button>
                 </div>
 
                 <!--Horizontal Line-->
@@ -475,17 +584,18 @@
 
     <!--Moonlights Meander-->
     <section>
-        <div class="neptuneSection">
+        <div id="moonFlightId" class="neptuneSection container-fluid row">
             
-            <div class="neptuneImage col-md-4">
+            <div class="neptuneImage col-lg-5">
                 <img src="../assets/img/Images/flightMoon.png" alt="Moon Flights Page Image" width="90%">
             </div>
 
-            <div class="neptuneFlightTextContainer col-md-8">
-                <h1>Moonlight Meander</h1>
+            <div class="neptuneFlightTextContainer col-lg-7">
+                <h1 id="moonId">Moonlight Meander</h1>
 
                 <!--Prices-->
                 <div class="neptunePrices">
+                    <p id="moonPriceCart" style="display: none;"> 15000</p>
                     <h3>R 15,000.00</h3>
                 </div>
 
@@ -509,15 +619,15 @@
                 </div>
 
                 <!--Add to Cart & Book Now Buttons-->
-                <div class="flightsAddButtons">
-                    <div class="neptuneAddToCartButton">
-                        <i class="fa-solid fa-minus" style="color: white;"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-plus" style="color: white;"></i>
+                <div class="flightsCartButtons">
+                    <div class="cartAddFlightButton">
+                        <div class="counterButton2">
+                            <button onclick="decreaseCount(counterMoon, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-minus" style="color: white;"></i></button>
+                            <label class="counterNumber" id="counterMoon">0</label>
+                            <button onclick="increaseCount(counterMoon, 'neptuneId', 'neptunePriceCart', 'neptuneCartFlight')"><i class="fa-solid fa-plus" style="color: white;"></i></button>
+                        </div>
                     </div>
-                    <div class="bookNowButton">
-                        <p>Book Now</p>
-                    </div>
+                    <button id="bookNowButton" type="button" onclick="cartButtons('neptuneCartFlight')">Book Now</button>
                 </div>
 
                 <!--Horizontal Line-->
@@ -548,40 +658,44 @@
                 </div> 
             </div> 
 
+            <div class="">
+
+            </div>
+
         </div>
     </section>
 
     <!--Footer-->
-    <section>
-        <div class="footerContainer">
+    <section class="footer">
+        <div class="footerContainer container-fluid row">
            <!--Logo Left-->
-           <div class="logoLeftFooter">
-               <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px"></a>
+           <div class="logoLeftFooter col-lg-4">
+               <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px" alt="Red Planet Ventures Logo"></a>
                <p id="footerLogoText">Offering unforgettable trips to <br>
                explore planets in our solar <br> system</p>
            </div>
    
            <!--Company Pages-->
-           <div class="pagesFooterLinks">
+           <div class="pagesFooterLinks col-lg-4">
                <h3 id="companyFooterText">Company</h3>
               
                <div class="pagesFooter">
-                   <p>Home</p>
-                   <p>Flights</p>
-                   <p>Contact Us</p>
-                   <p>About Us</p>
+                <a href="../index.html"> <p>Home</p> </a>
+                <a href="flights.html"> <p>Flights</p> </a>
+                <a href="../pages/contact.html"> <p>Contact Us</p> </a>
+                <a href="../pages/about.html"> <p>About Us</p> </a>
                </div>
            </div>
    
            <!--Social Media Links-->
-           <div class="socialMediaFooter">
+           <div class="socialMediaFooter col-lg-4">
                <h3 id="smFooterText">Social Media Links</h3>
    
                <div class="socialMediaContainerFooter">
-                   <img src="../assets/img/Images/smInstagram.png" width="50px" style="padding-left: 0;">
-                   <img src="../assets/img/Images/smX.png" width="50px">
-                   <img src="../assets/img/Images/smTicktock.png" width="50px">
-                   <img src="../assets/img/Images/smFacebook.png" width="50px">
+                    <a href="https://www.instagram.com/openwindowinstitute/"><img src="../assets/img/Images/smInstagram.png" width="50px" alt="Red Planet Ventures Instagram Image"></a>
+                    <a href="https://x.com/"><img src="../assets/img/Images/smX.png" width="50px" alt="Red Planet Ventures X Image"></a>
+                    <a href="https://www.tiktok.com/@open_window_"><img src="../assets/img/Images/smTicktock.png" width="50px" alt="Red Planet Ventures TikTok Image"></a>
+                    <a href="https://www.facebook.com/theopenwindow/"><img src="../assets/img/Images/smFacebook.png" width="50px" alt="Red Planet Ventures Facebook Image"></a>
                </div>
            </div>
         </div>
@@ -597,11 +711,12 @@
                    <p> Terms & Conditions</p>
                    <p> Privacy & Policy</p>
                </div>
-           </div>
-   
+            </div>
        </section>
 
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+       <script src="../js/script.js"></script>
 </body>
 
 </html>

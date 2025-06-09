@@ -22,29 +22,99 @@
     <!--Contact Us Header Section-->
     <header class="contactHeader">
         
-        <nav class="navFlex">
-            <div class="topNav">
-                <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px"></a>
-                
-                <!--Nav Bar-->
-                <div class="topNavRight">
-                   <a href="../index.html">Home</a>
-                   <a href="flights.html">Flights</a>
-                   <a class="active" href="contact.html">Contact</a>
-                   <a href="about.html">About</a>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid navBarFlex">
+            <a class="navbar-brand" href="../index.html"><img id="imgLogoNav" src="../assets/img/Images/logo.png" width="180px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!--Nav Links-->
+                <div class="navbar-nav">
+                    <a class=" nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../pages/flights.html">Flights</a>
+                    <a class="active nav-link" id="activeLink" href="../pages/contact.html">Contact</a>
+                    <a class="nav-link" href="../pages/about.html">About</a>
+                </div>
+            </div>    
+            
+            <div class="collapse navbar-collapse" 
+            id="navbarNavAltMarkup"> <!--Search Bar-->
+            <div class="containerSearch">
+                <div class="searchBarContainer">
+                    <button class="searchItem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="searchItem bar" onclick="DisplaySearchBAr()" id="searchbox" type="search" placeholder="Search" onkeyup="search()">
+                    <button class="searchItem" id="shoppingCartIcon" onclick="openModal()"><i class="fa-solid fa-basket-shopping line"></i></button>
+                    
                 </div>
 
-                 <!--Search Bar-->
-                 <div class="searchBarContainer">
-                    <div class="searchBar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <p id="searchText">Search</p>
-                        <i class="fa-solid fa-basket-shopping line"></i>
+                <a href="../pages/flights.html#marsFlightId">
+                <div class="product-list" id="product-list">
+                    <div class="product">
+                        <img src="../assets/img/Images/flighhtMars.png">
+                        <div class="p-details">
+                            <h2>The Classic Mars Experience</h2>
+                            <h3>R25 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#neptuneFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightNeptune.png">
+                        <div class="p-details">
+                            <h2>Neptune's Cosmic Dive</h2>
+                            <h3>R45 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#jupiterFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightJupiter.png">
+                        <div class="p-details">
+                            <h2>The Giants Journey</h2>
+                            <h3>R65 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#saturnFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightSaturn.png">
+                        <div class="p-details">
+                            <h2>A Ring Around Saturn</h2>
+                            <h3>R40 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#uranusFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightUranus.png">
+                        <div class="p-details">
+                            <h2>Uranus Uncharted</h2>
+                            <h3>R50 000</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../pages/flights.html#moonFlightId">
+                    <div class="product">
+                        <img src="../assets/img/Images/flightMoon.png">
+                        <div class="p-details">
+                            <h2>Moonlight Meander</h2>
+                            <h3>R15 000</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+                </a>
 
-        </nav>
+            </div>
+            </div>
+        </div>
+    </nav>
 
         <div class="headerContactContainer container" container>
             <div class="contactUsText">Contact <br> Us</div>
@@ -52,10 +122,36 @@
 
     </header>
 
+   <!--Modal-->
+    <div class="cartModal" id="cartModal">
+        <div class="modal-text">
+            <h2>Your cart</h2>
+            <p>All selected flights are displayed below</p>
+            <div id="marsCartFlight" class="marsCartFlight"></div>
+            <div id="neptuneCartFlight" class="neptuneCartFlight"></div>
+            <div id="jupiterCartFlight" class="jupiterCartFlight"></div>
+            <div id="saturnCartFlight" class="saturnCartFlight"></div>
+            <div id="uranusCartFlight" class="uranusCartFlight"></div>
+            <div id="moonCartFlight" class="moonCartFlight"></div>
 
+            <div class="cartBelow" id="cartBelow">
+                <div id="totalText" class="totalText">
+                    <p>Total:</p>
+                    <p>R 0.00</p>
+                </div>
+
+                <div class="shoppingCartButtons">
+                    <button id="checkOutButton" class="checkOutButton"><a href="../index.html">Check Out</a></button>
+                    <button id="continueShoppingButton" class="continueShoppingButton"><a href="../pages/flights.html">Continue Shopping</a></button>
+                </div>
+            </div>
+            <button id="closeModal" onclick="closeModal()">+</button>
+        </div>
+    </div>
+   
 
     <!--About Us Section-->
-    <section class="aboutSection">
+    <section class="aboutSection container-fluid">
         <div class="aboutUs row">
 
             <div class="col-md-6" style="padding: 0;">
@@ -83,8 +179,9 @@
 
 
     <!--Contact Section-->
-    <section>
-        <div class="contactUsSection">
+    <section class="container-fluid">
+        <div class="row" width="100%">
+        <div class="contactUsSection col-md-6">
             <div class="googleMapAndSocialsContainer">
                 <!--Social Media-->
                 <div class="socialMediaDiv">
@@ -92,10 +189,10 @@
                     <h1 id="socialMediaText">SOCIAL MEDIA PAGES</h1>
                     
                     <div class="socialsImages">
-                        <img src="../assets/img/Images/smInstagram.png" width="70%" height="70%">
-                        <img src="../assets/img/Images/smX.png" width="70%" height="70%">
-                        <img src="../assets/img/Images/smTicktock.png" width="70%" height="70%">
-                        <img src="../assets/img/Images/smFacebook.png" width="70%" height="70%">
+                        <a href="https://www.instagram.com/openwindowinstitute/"><img src="../assets/img/Images/smInstagram.png" width="100%" height="100%" alt="Red Planet Ventures Instagram Image"></a>
+                        <a href="https://x.com/"><img src="../assets/img/Images/smX.png" width="100%" height="100%" alt="Red Planet Ventures X Image"></a>
+                        <a href="https://www.tiktok.com/@open_window_"><img src="../assets/img/Images/smTicktock.png" width="100%" height="100%" alt="Red Planet Ventures TikTok Image"></a>
+                        <a href="https://www.facebook.com/theopenwindow/"><img src="../assets/img/Images/smFacebook.png" width="100%" height="100%" alt="Red Planet Ventures Facebook Image"></a>
                     </div>
                     
                 </div>
@@ -107,19 +204,20 @@
                         <h1 id="physicalLocation">PHYSICAL LOCATION</h1>
                     </div>
                     <div class="googleMap">
-                        <iframe class="googleMapCorner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.317263243842!2d28.20683321113712!3d-25.891938951234824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1743343893350!5m2!1sen!2sza" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="googleMapCorner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.317263243842!2d28.20683321113712!3d-25.891938951234824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1743343893350!5m2!1sen!2sza" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-6" id="contact">
-                <form class="formVertical" id="contactForm">
+            </div>
+            <!--Form-->
+            <div class="col-md-6 d-flex align-items-center justify-content-center" id="contact" width="100%">
+                <form name="contactForm" class="formVertical" id="contactForm">
                 <h3>SEND US A MESSAGE</h3>
                 
                 <div class="formInputs">
                     <div class="formControl">
                         <label>Your name</label>
-                        <input type="text" placeholder="Abc" required>
+                        <input id="userName" type="text" placeholder="Abc" required>
                     </div>
                     <div class="formControl">
                         <label>Email address</label>
@@ -135,67 +233,91 @@
                     </div>
 
                     <div class="submitButtonDiv">
-                        <button class="bookNowButton" id="submitButton" type="submit">Submit</button>
+                        <button class="bookNowButton" id="submitButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="getName()">Submit</button>
                     </div>
                 </div>
                 </form>
             </div>
+        
         </div>
     </section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content thankYouModel">
+      <div class="modal-header">
+        <div class="modal-title fs-5" id="exampleModalLabel"> <h1> Thank You for your message!</h1> </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        We've sucessfully recieved your message and will get back to you shortly!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Thank you</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
     <!--Footer-->
-    <section>
-     <div class="footerContainer">
-        <!--Logo Left-->
-        <div class="logoLeftFooter">
-            <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px"></a>
-            <p id="footerLogoText">Offering unforgettable trips to <br>
-            explore planets in our solar <br> system</p>
+    <section class="footer">
+        <div class="footerContainer container-fluid row">
+           <!--Logo Left-->
+           <div class="logoLeftFooter col-lg-4">
+               <a href="../index.html"><img src="../assets/img/Images/logo.png" width="180px" alt="Red Planet Ventures Logo"></a>
+               <p id="footerLogoText">Offering unforgettable trips to <br>
+               explore planets in our solar <br> system</p>
+           </div>
+   
+           <!--Company Pages-->
+           <div class="pagesFooterLinks col-lg-4">
+               <h3 id="companyFooterText">Company</h3>
+              
+               <div class="pagesFooter">
+                <a href="../index.html"> <p>Home</p> </a>
+                <a href="../pages/flights.html"> <p>Flights</p> </a>
+                <a href="contact.html"> <p>Contact Us</p> </a>
+                <a href="../pages/about.html"> <p>About Us</p> </a>
+               </div>
+           </div>
+   
+           <!--Social Media Links-->
+           <div class="socialMediaFooter col-lg-4">
+               <h3 id="smFooterText">Social Media Links</h3>
+   
+               <div class="socialMediaContainerFooter">
+                    <a href="https://www.instagram.com/openwindowinstitute/"><img src="../assets/img/Images/smInstagram.png" width="50px" alt="Red Planet Ventures Instagram Image"></a>
+                    <a href="https://x.com/"><img src="../assets/img/Images/smX.png" width="50px" alt="Red Planet Ventures X Image"></a>
+                    <a href="https://www.tiktok.com/@open_window_"><img src="../assets/img/Images/smTicktock.png" width="50px" alt="Red Planet Ventures TikTok Image"></a>
+                    <a href="https://www.facebook.com/theopenwindow/"><img src="../assets/img/Images/smFacebook.png" width="50px" alt="Red Planet Ventures Facebook Image"></a>
+               </div>
+           </div>
         </div>
-
-        <!--Company Pages-->
-        <div class="pagesFooterLinks">
-            <h3 id="companyFooterText">Company</h3>
-           
-            <div class="pagesFooter">
-                <p>Home</p>
-                <p>Flights</p>
-                <p>Contact Us</p>
-                <p>About Us</p>
+   
+           <!--Horizontal Line on Footer-->
+           <hr>
+   
+           <!--All Rights Reserved Footer Closer-->
+           <div class="allRightsReserved">
+               <p>All Rights Reserved @ Open Window 2025</p>
+   
+               <div class="tsAndCs">
+                   <p> Terms & Conditions</p>
+                   <p> Privacy & Policy</p>
+               </div>
             </div>
-        </div>
-
-        <!--Social Media Links-->
-        <div class="socialMediaFooter">
-            <h3 id="smFooterText">Social Media Links</h3>
-
-            <div class="socialMediaContainerFooter">
-                <img src="../assets/img/Images/smInstagram.png" width="50px" style="padding-left: 0;">
-                <img src="../assets/img/Images/smX.png" width="50px">
-                <img src="../assets/img/Images/smTicktock.png" width="50px">
-                <img src="../assets/img/Images/smFacebook.png" width="50px">
-            </div>
-        </div>
-     </div>
-
-        <!--Horizontal Line on Footer-->
-        <hr>
-
-        <!--All Rights Reserved Footer Closer-->
-        <div class="allRightsReserved">
-            <p>All Rights Reserved @ Open Window 2025</p>
-
-            <div class="tsAndCs">
-                <p> Terms & Conditions</p>
-                <p> Privacy & Policy</p>
-            </div>
-        </div>
-
-    </section>
+       </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script src="../js/script.js"></script>
 </body>
 
 
